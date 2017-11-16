@@ -42,8 +42,6 @@ yarn-error.log
 .DS_Store
 Thumbs.db
 
-cordova/hooks/
-cordova/platforms/
-cordova/plugins/
-cordova/www
-cordova/res
+cordova/*
+!cordova/config.xml
+!cordova/res/icon.png

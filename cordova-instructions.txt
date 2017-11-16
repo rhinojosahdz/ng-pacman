@@ -1,0 +1,9 @@
+1. install cordova
+2. create dir cordova/
+3. copy config.xml in cordova/ (use the one in the ng-invaders repo or the one here)
+4. modify it accordingly
+5. create dir res/ and www/
+6. put app icon as res/icon.png
+7. run ng build --prod and put the contents of dist/ in cordova/www/
+8. cd into cordova and run `cordova platform add android`
+9. run `cordova run android --device` to run the app in your device

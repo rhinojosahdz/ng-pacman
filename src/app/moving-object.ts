@@ -15,7 +15,7 @@ export abstract class MovingObject {
   public x: number;
   public y: number;
   public color: string;
-  protected moving = false;
+  public moving = false;
   public r = 4;
   public direction: IDirection;
   protected keyboardMap: { [iDirection: string]: IDirection } = {
@@ -27,7 +27,7 @@ export abstract class MovingObject {
   public modelService: ModelService;
   public utilService: UtilService;
   private _observablesService: ObservablesService;
-  protected bufferedMove: IDirection;
+  public bufferedMove: IDirection;
   public intervalId;
   constructor(
     public type: 'ghost' | 'pacman',

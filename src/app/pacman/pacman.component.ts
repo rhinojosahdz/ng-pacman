@@ -18,7 +18,7 @@ import { IPacmanStartingPosition } from '../i-pacman-starting-position';
 })
 export class PacmanComponent extends MovingObject implements OnInit {
 
-  @HostBinding('class.moving') protected moving = false;
+  @HostBinding('class.moving') public moving = false;
   public lives = +localStorage.getItem('lives') || environment.pacmanStartingLives;
   public startingPositions = this.getRandomStartingPosition();
   public dying = false;

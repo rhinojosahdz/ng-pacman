@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+<widget id="com.rhinojosa.ngpacman" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Ng Pacman</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Eat all the ghosts!!! Developed in Angular 2+ and TypeScript.
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="rhinojosahdz@gmail.com" href="rhinojosa.com">
+        Roberto Jaime Hinojosa Hernandez
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -22,6 +22,9 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <engine name="android" spec="^6.3.0" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <icon src="res/icon.png" />
+    <preference name="SplashScreenDelay" value="1" />
+    <preference name="Orientation" value="portrait" />
+    <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
 </widget>
