@@ -1,0 +1,11 @@
+@import '../../vars';
+$yellow: $pacman-color;
+#pacman-dying-mask {
+    circle {
+        fill: $pacman-color;
+    }
+}
+
+.body {
+  fill: $pacman-color;
+}

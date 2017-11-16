@@ -1,0 +1,65 @@
+@import '../../vars';
+.blue {
+    .body,
+    .iris {
+        fill: blue;
+    }
+    .eye {
+        fill: white;
+    }
+}
+
+.red {
+    .body {
+        fill: red;
+    }
+}
+
+.pink {
+    .body {
+        fill: pink;
+    }
+}
+
+.orange {
+    .body {
+        fill: orange;
+    }
+}
+
+.green {
+    .body {
+        fill: green;
+    }
+}
+
+.purple {
+    .body {
+        fill: purple;
+    }
+}
+
+.brown {
+    .body {
+        fill: brown;
+    }
+}
+
+.blue {
+    .body {
+        fill: blue;
+    }
+}
+
+.black {
+    .body {
+        fill: black;
+    }
+}
+
+.body,
+.iris {
+    @if $w {
+        fill: #F5F5F5 !important;
+    }
+}

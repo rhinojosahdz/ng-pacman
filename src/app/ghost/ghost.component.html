@@ -1,0 +1,8 @@
+<svg:g [attr.transform]="movingObjectService.getTranslate(x, y) + ((stunned || !modelService.board.ready) ? movingObjectService.getRotate(undefined, this.r, this.degree) : '')" [attr.opacity]="visible ? 1 : 0" [ngClass]="color" #elementRef>
+  <svg:circle class="upper-body body" #elementRef [attr.r]="r" [attr.cx]="r" [attr.cy]="r"></svg:circle>
+  <rect class="bottom-body body" width="8" height="4" transform="translate(0, 4)"></rect>
+  <svg:circle class="left-eye eye" fill="white" cx="2" cy="3.5" r="2"></svg:circle>
+  <svg:circle class="right-eye eye" fill="white" cx="6" cy="3.5" r="2"></svg:circle>
+  <svg:circle class="left-iris iris" [attr.cx]="getEyeIrisPosition('left', 'cx')" [attr.cy]="getEyeIrisPosition('left', 'cy')" r="1"></svg:circle>
+  <svg:circle class="right-iris iris" [attr.cx]="getEyeIrisPosition('right', 'cx')" [attr.cy]="getEyeIrisPosition('right', 'cy')" r="1"></svg:circle>
+</svg:g>

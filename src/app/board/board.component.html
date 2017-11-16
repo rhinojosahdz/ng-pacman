@@ -1,0 +1,32 @@
+<svg #board [attr.width]="svgWidth" [attr.height]="svgHeight">
+  <g [attr.height]="padding.top" [attr.transform]="'translate(' + padding.left + ',' + (padding.top / 2) + ')'" app-top-bar></g>
+  <g [attr.transform]="'translate(' + padding.left + ',' + padding.top + ')'">
+    <path *ngFor="let path of modelService.paths; let idx = index;" class="path" [ngClass]="['path-' + idx, flash ? 'flash' : '']" [attr.d]="getPath(path)"></path>
+    <circle *ngFor="let dot of modelService.dots; let idx = index;" class="dot" [ngClass]="(dot.magic ? 'magic ' : '') + 'dot-' + idx" [attr.cx]="dot.x" [attr.cy]="dot.y"
+      [attr.r]="dot.magic ? 3 : 1"></circle>
+    <g #elementRef [id]="'pacman'" app-pacman></g><!-- [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" -->
+    <g *ngIf="modelService.pacman.dying" app-pacman-dying></g>
+    <g *ngIf="modelService.boardSize >= 1" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'red'" app-ghost></g>
+    <g *ngIf="modelService.boardSize >= 1" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'green'" app-ghost></g>
+    <g *ngIf="modelService.boardSize >= 2 || modelService.lvl >= 3" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'orange'" app-ghost></g>
+    <g *ngIf="modelService.boardSize >= 3 || modelService.lvl >= 7" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'pink'" app-ghost></g>
+
+    <g *ngIf="modelService.lvl >= 7" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'purple'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 7" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'brown'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 8" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'blue'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 9" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'black'" app-ghost></g>
+
+    <g *ngIf="modelService.lvl >= 10" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'red'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 11" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'green'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 12" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'orange'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 13" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'pink'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 14" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'purple'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 15" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'brown'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 16" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'blue'" app-ghost></g>
+    <g *ngIf="modelService.lvl >= 17" [attr.visibility]="!modelService.pacman.dying ? 'visible' : 'hidden'" #elementRef [id]="'black'" app-ghost></g>
+
+    <g *ngIf="modelService.checkerAlive" app-no-close-ends-checker></g>
+  </g>
+  <g [attr.transform]="'translate(' + padding.left + ',' + (padding.top + boardHeight) + ')'" app-bottom-bar></g>
+</svg>
+<!-- <div style="color: white">{{modelService.pacman.direction}}</div> -->

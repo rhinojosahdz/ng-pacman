@@ -1,0 +1,7 @@
+<svg:text class="high-score-label label" [attr.transform]="highScoreLabelTransform()">HIGH SCORE</svg:text>
+<svg:text class="current-score-label label" [attr.transform]="currentScoreLabelTransform()">SCORE</svg:text>
+<svg:text class="high-score score" [attr.transform]="highScoreTransform()">{{highScore > currentScore ? highScore : currentScore}}</svg:text>
+<svg:text class="current-score score" [attr.transform]="currentScoreTransform()">{{currentScore}}</svg:text>
+<svg:text *ngIf="modelService.board.gameover" class="gameover-label bottom-center-label" [attr.transform]="bottomCenterLabelTransform()">GAME OVER</svg:text>
+<svg:text *ngIf="modelService.board.starting" class="start-label bottom-center-label" [attr.transform]="bottomCenterLabelTransform()">READY!</svg:text>
+<svg:text *ngIf="!modelService.board.gameover && !modelService.board.starting" class="start-label bottom-center-label" [attr.transform]="bottomCenterLabelTransform()">LEVEL {{modelService.lvl}}</svg:text>

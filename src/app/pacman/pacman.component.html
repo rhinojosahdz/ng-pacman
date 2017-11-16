@@ -1,0 +1,11 @@
+<svg:g #elementRef [attr.transform]="movingObjectService.getTranslate(this.x, this.y) + movingObjectService.getRotate(this.direction, this.r)">
+  <svg:defs>
+    <svg:mask id="pacman-mouth-mask">
+      <svg:circle class="circle body" [attr.cx]="r" [attr.cy]="r" [attr.r]="r"></svg:circle>
+      <svg:path class="mouth-gap mouth" [attr.d]="getMouthD()"></svg:path>
+      <svg:path class="upper-lip mouth" [attr.d]="getUpperLipD()" [ngStyle]="{'animation-play-state': (!moving || modelService.gameFrozen) ? 'paused' : 'running'}" id="upper-lip"></svg:path>
+      <svg:path class="bottom-lip mouth" [attr.d]="getBottomLipD()" [ngStyle]="{'animation-play-state': (!moving || modelService.gameFrozen) ? 'paused' : 'running'}"  id="bottom-lip"></svg:path>
+    </svg:mask>
+  </svg:defs>
+  <svg:circle class="body" [attr.visibility]="!dying ? 'visible' : 'hidden'" mask="url(#pacman-mouth-mask)" [attr.cx]="r" [attr.cy]="r" [attr.r]="r"></svg:circle>
+</svg:g>

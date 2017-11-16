@@ -1,0 +1,30 @@
+@import '../../vars';
+:host {
+    fill: $top-bar-labels;
+    font-size: 5px;
+    .score {
+        // auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical | inherit
+        alignment-baseline: before-edge;
+    }
+    .label {
+        alignment-baseline: after-edge;
+    }
+    .bottom-center-label {
+        text-anchor: middle;
+        alignment-baseline: before-edge;
+    }
+    .high-score,
+    .high-score-label {
+        text-anchor: start;
+    }
+    .current-score,
+    .current-score-label {
+        text-anchor: end;
+    }
+    .start-label {
+        fill: $ready-text;
+    }
+    .gameover-label {
+        fill: $gameover-text;
+    }
+}

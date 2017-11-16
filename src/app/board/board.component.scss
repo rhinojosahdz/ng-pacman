@@ -1,0 +1,44 @@
+@import '../../vars';
+svg {
+    background: $board-bg-color;
+    .path {
+        stroke: $lines-color;
+        stroke-width: 1;
+        &.door {
+            stroke: $door-color;
+        }
+        &.flash {
+            animation: flash .5s linear infinite;
+        }
+    }
+    .dot {
+        fill: $dots-color;
+        &.magic {
+            animation: blinker .4s linear infinite;
+        }
+    }
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash {
+  50% {
+      stroke: $flash-color;
+  }
+}
+
+.gameover-text {
+    color: $gameover-text;
+}
+
+.ready-text {
+    color: $ready-text;
+}
+
+.up-text {
+    color: $up-text;
+}

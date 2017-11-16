@@ -1,0 +1,22 @@
+@import '../../vars';
+:host {
+    fill: white;
+    font-size: 5px;
+    text {
+        // auto | baseline | before-edge | text-before-edge | middle | central | after-edge | text-after-edge | ideographic | alphabetic | hanging | mathematical | inherit
+        // alignment-baseline: auto;
+    }
+    .lives {
+        text-anchor: start;
+    }
+    .fruits {
+        text-anchor: end;
+        .arrow {
+          stroke-width: .5;
+          stroke: $direction-color;
+        }
+        text {
+            alignment-baseline: hanging;
+        }
+    }
+}

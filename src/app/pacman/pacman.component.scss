@@ -1,0 +1,56 @@
+@import '../../vars';
+$yellow: $pacman-color;
+#pacman-mouth-mask {
+    .body,
+    .bottom-lip,
+    .upper-lip {
+        fill: $pacman-color;
+    }
+}
+
+.body {
+    fill: $pacman-color;
+}
+
+#upper-lip {
+    animation: upper-lip .2s linear infinite alternate;
+    transform-origin: bottom center;
+}
+
+#bottom-lip {
+    animation: bottom-lip .2s linear infinite alternate;
+    transform-origin: top center;
+}
+
+@keyframes upper-lip {
+    0% {}
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bottom-lip {
+    0% {}
+    50% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+// TODO make this work and remove the binding, not sure why it doesn't work
+// #upper-lip,
+// #bottom-lip {
+//     animation-play-state: paused;
+// }
+
+// .moving {
+//     #upper-lip,
+//     #bottom-lip {
+//         animation-play-state: running;
+//     }
+// }

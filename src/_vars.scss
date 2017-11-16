@@ -1,0 +1,28 @@
+$w: false;
+$pacman-color: #FEF837;
+$checker-color: #FEF837;
+$board-bg-color: black;
+$lines-color: blue;
+$door-color: blue;
+$dots-color:#FDAAA7;
+$gameover-text: red;
+$ready-text: yellow;
+$up-text: black;
+$top-bar-labels: white;
+$flash-color: yellow;
+$direction-color: white;
+//
+@if $w {
+    $checker-color: #F5F5F5;
+    $pacman-color: #F5F5F5;
+    $board-bg-color: white;
+    $lines-color: #F5F5F5;
+    $dots-color: #F5F5F5;
+    $door-color: #F5F5F5;
+    $gameover-text: #F5F5F5;
+    $ready-text: #F5F5F5;
+    $up-text: #F5F5F5;
+    $top-bar-labels: #F5F5F5;
+    $flash-color: white;
+    $direction-color: #F5F5F5;
+}

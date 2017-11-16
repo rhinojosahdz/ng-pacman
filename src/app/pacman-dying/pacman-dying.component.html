@@ -1,0 +1,10 @@
+<svg:g [attr.transform]="!isALife ? movingObjectService.getTranslate(modelService.pacman.x, modelService.pacman.y) : ''">
+  <svg:defs>
+    <svg:mask id="pacman-dying-mask">
+      <svg:circle cx="4" cy="4" r="4"></svg:circle>
+      <svg:path [attr.d]="getPathHigh()"></svg:path>
+      <svg:path [attr.d]="getPathLow()"></svg:path>
+    </svg:mask>
+  </svg:defs>
+  <svg:circle class="body" mask="url(#pacman-dying-mask)" cx="4" cy="4" r="4"></svg:circle>
+</svg:g>
